@@ -20,7 +20,7 @@ export default class Articles {
   query(config) {
     // Create the $http object for this request
     let request = {
-      url: this._AppConstants.api + '/articles' + ((config.type === 'feed') ? '/feed' : ''),
+      url: this._AppConstants.api + '/movie/popular?api_key=' + this._AppConstants.apiKey + ((config.type === 'feed') ? '/feed' : ''),
       method: 'GET',
       params: config.filters ? config.filters : null
     };
